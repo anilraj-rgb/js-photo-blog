@@ -61,6 +61,30 @@ axios
         }
       });
 
+    });
+    
+  })  
+  
+  .catch((error) => {
+    // codice da eseguire in caso di errore
+    console.error(error);
+    
+  });
+  
+  //! Aggiungo un listener per il pulsante Chiudi
+  document.getElementById("closePopUp").addEventListener("click", function () {
+    
+    // Nascondi il pop-up
+    document.querySelector(".opacity-container").classList.add("d-none"); 
+  });
+  
+  // ! erorre STRANO (mancava il punto....)
+  // ! premendo sul container opaco aggiungo la classe d-none 
+  document.querySelector(".opacity-container").addEventListener("click", function () {
+    document.querySelector(".opacity-container").classList.add("d-none"); // Nascondi il pop-up
+  });
+
+
       
 
     
