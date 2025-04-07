@@ -11,3 +11,13 @@ h4,
 h5 {
   font-family: "Edu TAS Beginner", sans-serif;
 }
+
+p {
+    font-family: "Sometype Mono", "monospace";
+  }
+  
+  body {
+    background-image: url("../img/cork.png");
+    background-size: contain;
+  }
+  
