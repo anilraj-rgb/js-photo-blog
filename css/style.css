@@ -35,4 +35,31 @@ p {
   visibility: hidden;
 }
 
-  
+  /* ! modal  */
+.opacity-container {
+  /*todo prendo tutto lo schermo  */
+  width: 100vw;
+  height: 100vh;
+  /* deve essere sopra le card che hanno z-1 */
+  z-index: 2;
+  /*! do un opacita' */
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+#popUp {
+  /* possibile in disply fixed */
+  z-index: 3;
+  width: 50%;
+  max-width: 20vw;
+
+  outline: 1px solid white;
+  background-color: rgb(5, 5, 5);
+  box-shadow: 0 0.5rem 5rem rgba(130, 99, 155, 0.9);
+}
+
+
+/* .rotation-none:hover{
+opacity: 0;
+    visibility: hidden;
+
+} */

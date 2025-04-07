@@ -38,3 +38,29 @@ axios
    
       console.log(element.id)
         
+
+       // Aggiungo un listener per il click sulle card
+       cardContainer.addEventListener("click", function (event) {
+            
+        //! Controlla se il click è su un link (<a>)
+        const clickedElement = event.target.closest("a");
+        
+        if (clickedElement) {
+          event.preventDefault();
+
+          //todo  Ottieni l'URL dell'immagine cliccata
+          const imgSorgente = clickedElement.querySelector("img").src; 
+            
+          // si Usa innerHTML per aggiornare l'immagine nel popup
+          document.getElementById("popUpImg").innerHTML =
+          `
+          <img src="${imgSorgente}" class="card-img-top p-3 rounded " width="250px" alt=${element.title}>
+          `;
+          // Mostra il pop-up
+          document.querySelector(".opacity-container").classList.remove("d-none"); 
+        }
+      });
+
+      
+
+    
